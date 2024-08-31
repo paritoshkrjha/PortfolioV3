@@ -1,7 +1,7 @@
 import { motion, stagger, useAnimate } from 'framer-motion'
 import { useEffect } from 'react'
 
-const HELLOS = [
+const GREETINGS = [
   'Hello!', // English
   'Hola!', // Spanish
   'Bonjour!', // French
@@ -9,7 +9,6 @@ const HELLOS = [
   'Olá!', // Portuguese
   'Namaste!', // Hindi
   'Konnichiwa!', // Japanese
-  'Salam!', // Arabic (used across many regions)
   'Ni hao!',
 ]
 
@@ -18,7 +17,7 @@ function SplashText() {
   const [scope, animate] = useAnimate()
 
   function getRandomGreeting() {
-    return HELLOS[Math.floor(Math.random() * HELLOS.length)]
+    return GREETINGS[Math.floor(Math.random() * GREETINGS.length)]
   }
 
   useEffect(() => {
