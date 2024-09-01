@@ -8,7 +8,6 @@ function Divider() {
         duration: 1,
         delay: 0.6,
         ease: 'easeInOut',
-
       }}
       className="h-[2px] w-[2px] mt-2 bg-white"
     />

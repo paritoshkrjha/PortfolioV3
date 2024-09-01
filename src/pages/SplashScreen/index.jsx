@@ -10,12 +10,12 @@ function SplashScreen() {
           opacity: 1,
         }}
         animate={{
-          y: '-55%',
-          opacity: 0,
+          y: '-100%',
         }}
         transition={{
           delay: 2,
           duration: 0.8,
+          ease: 'easeIn',
         }}
         className="absolute top-0 left-0 h-[55%] w-full bg-[#1a1a1a] flex flex-col justify-end items-center"
       >
@@ -27,12 +27,12 @@ function SplashScreen() {
           opacity: 1,
         }}
         animate={{
-          y: '45%',
-          opacity: 0,
+          y: '100%',
         }}
         transition={{
           delay: 2,
           duration: 0.8,
+          ease: 'easeIn',
         }}
         className="absolute bottom-0 left-0 h-[45%] w-full bg-[#1a1a1a] text-white"
       />
