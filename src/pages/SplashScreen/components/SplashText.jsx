@@ -39,7 +39,7 @@ function SplashText() {
   return (
     <motion.ul
       ref={scope}
-      className="flex text-white text-7xl font-extrabold font-dm-sans"
+      className="flex text-white lg:text-7xl md:text-6xl sm:text-5xl text-4xl font-extrabold font-dm-sans"
     >
       {greeting.map((letter, index) => (
         <li key={index}>{letter}</li>
