@@ -17,7 +17,7 @@ function SplashScreen() {
           duration: 0.8,
           ease: 'easeIn',
         }}
-        className="absolute top-0 left-0 h-[55%] w-full bg-[#1a1a1a] flex flex-col justify-end items-center"
+        className="absolute top-0 left-0 h-[55%] w-full bg-black flex flex-col justify-end items-center"
       >
         <SplashText />
         <Divider />
@@ -34,7 +34,7 @@ function SplashScreen() {
           duration: 0.8,
           ease: 'easeIn',
         }}
-        className="absolute bottom-0 left-0 h-[45%] w-full bg-[#1a1a1a] text-white"
+        className="absolute bottom-0 left-0 h-[45%] w-full bg-black text-white"
       />
     </div>
   )
