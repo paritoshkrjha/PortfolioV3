@@ -7,7 +7,7 @@ import AnimatedButton from '../../components/ui/AnimatedButton'
 function Projects() {
   return (
     <>
-      <Heading label="Projects" />
+      <Heading label="My Projects." />
       <div className=" mt-5 flex flex-col gap-y-5">
         <ProjectCard
           title={'Yumster'}
