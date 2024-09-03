@@ -1,12 +1,30 @@
 import React from 'react'
-
+import { motion } from 'framer-motion'
 import Heading from '../../components/Heading'
 import ProjectCard from './components/ProjectCard'
 import AnimatedButton from '../../components/ui/AnimatedButton'
 
 function Projects() {
   return (
-    <>
+    <motion.div
+      variants={{
+        hidden: {
+          y: 40,
+          opacity: 0,
+        },
+        visible: {
+          y: 0,
+          opacity: 1,
+          transition: {
+            delay: 0.2,
+            staggerChildren: 0.1,
+          },
+        },
+      }}
+      initial="hidden"
+      animate="visible"
+      className="mt-4"
+    >
       <Heading label="My Projects." />
       <div className=" mt-5 flex flex-col gap-y-5">
         <ProjectCard
@@ -42,7 +60,7 @@ function Projects() {
           to="https://drive.google.com/file/d/1LUIpSsSbEtQme9SV9qfL6SKm82TXpZPS/view?usp=drive_link"
         />
       </div>
-    </>
+    </motion.div>
   )
 }
 
