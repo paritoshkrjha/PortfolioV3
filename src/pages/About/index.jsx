@@ -9,9 +9,9 @@ function About() {
     <div className="mt-4">
       <Heading label="About Me." />
       <Intro />
-      <Education />
       <Experience />
-      <div className='m-8'>
+      <Education />
+      <div className="m-8">
         <AnimatedButton label={'Know more about my Projects'} to="/projects" />
       </div>
     </div>
