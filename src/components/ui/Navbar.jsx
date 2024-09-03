@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import Container from '../Container'
+import { motion } from 'framer-motion'
 
 function NavItem({ label, path }) {
   return (
@@ -19,7 +20,17 @@ function NavItem({ label, path }) {
 function Navbar() {
   return (
     <Container>
-      <div className="flex items-center justify-between">
+      <motion.div
+        initial={{
+          y: -20,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        className="flex items-center justify-between"
+      >
         <NavLink to="/">
           <p className="font-logo text-white text-4xl text-center">Pk.</p>
         </NavLink>
@@ -28,7 +39,7 @@ function Navbar() {
           <NavItem label={'Projects'} path={'/projects'} />
           <NavItem label={'Contact'} path={'/contact'} />
         </div>
-      </div>
+      </motion.div>
     </Container>
   )
 }
