@@ -32,6 +32,35 @@ function NavItem({ label, path }) {
   )
 }
 
+function ResumeButton() {
+  return (
+    <motion.div
+      variants={{
+        hidden: {
+          y: -40,
+          opacity: 0,
+        },
+        visible: {
+          y: 0,
+          opacity: 1,
+        },
+      }}
+    >
+      <a
+        href="https://drive.google.com/file/d/1LUIpSsSbEtQme9SV9qfL6SKm82TXpZPS/view?usp=drive_link"
+        target="_blank"
+      >
+        <button className="cursor-pointer border-white border-2 px-3 py-2 rounded-md text-white tracking-wider shadow-xl animate-pulse hover:animate-none ">
+          <div className="flex items-center gap-2">
+            <p>Resume</p>
+            <FiExternalLink />
+          </div>
+        </button>
+      </a>
+    </motion.div>
+  )
+}
+
 function Navbar() {
   return (
     <Container>
@@ -70,17 +99,7 @@ function Navbar() {
         >
           <NavItem label={'About'} path={'/about'} />
           <NavItem label={'Projects'} path={'/projects'} />
-          <a
-            href="https://drive.google.com/file/d/1LUIpSsSbEtQme9SV9qfL6SKm82TXpZPS/view?usp=drive_link"
-            target="_blank"
-          >
-            <button className="cursor-pointer border-white border-2 px-3 py-2 rounded-md text-white tracking-wider shadow-xl animate-pulse hover:animate-none ">
-              <div className="flex items-center gap-2">
-                <p>Resume</p>
-                <FiExternalLink />
-              </div>
-            </button>
-          </a>
+          <ResumeButton />
         </motion.div>
       </motion.div>
     </Container>
