@@ -1,5 +1,16 @@
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import HeroButton from './components/HeroButton'
+
+const SlideInVariants = {
+  hidden: {
+    opacity: 0,
+    y: 72,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+}
 
 function HomePage() {
   return (
@@ -9,7 +20,14 @@ function HomePage() {
           opacity: 0,
           y: 72,
         },
-        visible: { opacity: 1, y: 0, scale: [1.1, 1] },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            delay: 0.2,
+            staggerChildren: 0.1,
+          },
+        },
       }}
       initial="hidden"
       animate="visible"
@@ -20,6 +38,7 @@ function HomePage() {
       className="max-h-screen h-[600px] w-full flex flex-col items-center justify-center"
     >
       <motion.div
+        variants={SlideInVariants}
         transition={{
           type: 'spring',
         }}
@@ -28,7 +47,10 @@ function HomePage() {
         PARITOSH KUMAR JHA
       </motion.div>
 
-      <motion.div className="mb-12 text-lg tracking-tight text-gray-400 md:text-xl text-center mt-4 ">
+      <motion.div
+        variants={SlideInVariants}
+        className="mb-12 text-lg tracking-tight text-gray-400 md:text-xl text-center mt-4 "
+      >
         <p>
           Turning Ideas into Reality— One Line of Code at a Time. I’m a software
           developer with a passion for{' '}
@@ -37,7 +59,9 @@ function HomePage() {
           crafting apps that connect, engage, and inspire.
         </p>
       </motion.div>
-      <HeroButton label={'Know more'} />
+      <motion.div variants={SlideInVariants}>
+        <HeroButton label={'Know more'} />
+      </motion.div>
     </motion.div>
   )
 }
