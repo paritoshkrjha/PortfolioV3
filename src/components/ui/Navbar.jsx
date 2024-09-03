@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { FiExternalLink } from 'react-icons/fi'
 import { motion } from 'framer-motion'
 
 import Container from '../Container'
@@ -74,7 +75,10 @@ function Navbar() {
             target="_blank"
           >
             <button className="cursor-pointer border-white border-2 px-3 py-2 rounded-md text-white tracking-wider shadow-xl animate-pulse hover:animate-none ">
-              Resume
+              <div className="flex items-center gap-2">
+                <p>Resume</p>
+                <FiExternalLink />
+              </div>
             </button>
           </a>
         </motion.div>
