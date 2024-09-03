@@ -25,7 +25,10 @@ function ProjectCard({
   return (
     <motion.div
       initial={{ y: 0 }}
-      whileHover={{ y: -10, type: 'spring' }}
+      whileHover={{ y: -5 }}
+      translate={{
+        type: 'spring',
+      }}
       className="relative px-4 py-6 rounded-md bg-[#212131]/60 backdrop-blur-sm overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
