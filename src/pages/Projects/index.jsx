@@ -37,7 +37,10 @@ function Projects() {
         />
       </div>
       <div className="m-8">
-        <AnimatedButton label={'View my Resume'} to="/projects" />
+        <AnimatedButton
+          label={'View my Resume'}
+          to="https://drive.google.com/file/d/1LUIpSsSbEtQme9SV9qfL6SKm82TXpZPS/view?usp=drive_link"
+        />
       </div>
     </>
   )
