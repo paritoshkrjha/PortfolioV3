@@ -6,7 +6,7 @@ function Experience() {
       <h1 className="text-3xl font-bold text-white">My Experience.</h1>
       <ul className="mt-6">
         <ExperienceItem
-          position={'Flutter Developer Intern'}
+          position={'Software Developer Intern'}
           company={'SixSense Mobility'}
           duration={'August, 2023 - April, 2024'}
           location={'Delhi, India'}
